@@ -5,3 +5,26 @@
     margin:0;
     padding:0;
 }
+body{
+    /* background-image: url('../images/bg_images/brick.jpg');
+    background-repeat: none; */
+    background-color: #aaa;
+}
+.jumbotron{
+    height: 200px;
+    background-color: rgb(36,41,46);
+    padding-top: 40px;
+    color: #aaa;
+}
+.mainbody{
+    background-color: #eee;
+    opacity: .9;
+    padding: 0;
+    margin: 15px;
+}
+.inner-header{
+    background-color: rgb(36,41,46);
+    padding: 10px;
+    color: #aaa;
+    font-size: 1.3em;
+}

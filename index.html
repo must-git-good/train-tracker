@@ -7,24 +7,122 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- CSS Reset -->
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang" rel="stylesheet"> -->
-
+        <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+                crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+                crossorigin="anonymous"></script>
+        <!-- My Style Sheet -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <!-- Moment         -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous"> -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-                crossorigin="anonymous"></script> -->
-
-                
-        <title>    </title>
+        <title>Train Tracker</title>
 </head>
 
 <body>
-                
+        <header>
+                <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                                <h1 class="display-4">Train Schedule</h1>
+                                <p class="lead">Have some information on when a train is stopping by?
+                                        <br>Leave it for others to find.
+                                        <br>
+                                </p>
+                        </div>
+                </div>
+        </header>
 
+        <div class="container"></div>
+        <div class="row">
+                <div class="col-md-1">
+                        <!-- Intentionally Blank -->
+                </div>
+                <div class="col-md-10 mainbody">
+
+                        <table class="table table-striped">
+                                <header class="inner-header">Current Train Schedule:</header>
+                                <thead>
+                                        <tr>
+                                                <th scope="col">Train Name</th>
+                                                <th scope="col">Destination</th>
+                                                <th scope="col">Frequency (min)</th>
+                                                <th scope="col">Next Arrival</th>
+                                                <th scope="col">Minutes Away</th>
+                                        </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                        <tr >
+                                                <td>Polar Express</td>
+                                                <td>The North Pole</td>
+                                                <td>525,600</td>
+                                                <td>Dec. 24th, 10:10:10 pm</td>
+                                                <td>Far too long...</td>
+                                        </tr>
+
+                                </tbody>
+                                <tbody id="table-body">
+                                                <tr id="table-row-posted">
+                                                        <td id="name-posted"> </td>
+                                                        <td id="destination-posted"> </td>
+                                                        <td id="time-posted"> </td>
+                                                        <td id="frequency-posted"> </td>
+                                                        <td> </td>
+                                                </tr>
+        
+                                        </tbody>
+                        </table>
+                </div>
+                <div class="col-md-1">
+                        <!-- Intentionally Blank -->
+                </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-1">
+                        <!-- Intentionally Blank -->
+                </div>
+                <div class="col-md-10 mainbody">
+                        <form>
+                                <header class="inner-header">Add Train:</header>
+                                <div class="form-group">
+                                        <label for="train-name-label">Train Name</label>
+                                        <input type="text" class="form-control" id="train-name-input" placeholder="Which train are you scheduling?">
+                                </div>
+                                <div class="form-group">
+                                        <label for="destination-label">Destination</label>
+                                        <input type="text" class="form-control" id="destination-input" placeholder="Where is it going?">
+                                </div>
+                                <div class="form-group">
+                                        <label for="time-label">First Train Time </label>
+                                        <input type="datetime" class="form-control" id="time-input" placeholder="(HH:mm - military time)">
+                                </div>
+                                <div class="form-group">
+                                        <label for="frequency-label">Frequency</label>
+                                        <input type="number" class="form-control" id="frequency-input" placeholder="(in minutes)">
+                                </div>
+                                <button type="button" id="post-schedule" class="btn btn-dark">Post Schedule</button>
+                
+                        </form>
+                </div>
+        </div>
+        <div class="col-md-1">
+                <!-- Intentionally Blank -->
+        </div>
+        </div>
+
+
+
+        </div>
+        <!--End Container-->
         <script src="assets/javascript/script.js"></script>
 </body>
+
 </html>
