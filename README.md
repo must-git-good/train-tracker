@@ -1,5 +1,5 @@
 # Train Tracker
-A practive website implementing basic 3rd-party database references with a fun train theme!
+A practice website implementing basic 3rd-party database references with a fun train theme!
 
 ## Take a Look: 
 
